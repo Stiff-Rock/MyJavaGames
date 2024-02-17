@@ -4,20 +4,20 @@ import java.util.Scanner;
 import java.util.Stack;
 
 //@Autor:Yago Pernas Gómez
-public class Hanoi {
+public class HANOI {
 	// Inicializamos los 3 stacks que representan el palo a,b y c.
 	Stack<Integer> paloA = new Stack<>();
 	Stack<Integer> paloB = new Stack<>();
 	Stack<Integer> paloC = new Stack<>();
 	// Creamos las variables "final int piezaX" ya que son valores constantes que
 	// vamos a usar
-	// a lo largo de todo el código y no queremos que puedan ser modificados
+	// a lo largo del el código y no queremos que puedan ser modificados
 	final int pieza3 = 3; // Pieza "3" que se corresponde con la mas grande (la última)
 	final int pieza2 = 2; // Pieza "2" que se corresponde con la mediana
 	final int pieza1 = 1; // Pieza "1" que se corresponde con la pequeña (la primera)
 
 	public void inicio(Scanner in) {
-		Hanoi hanoi = new Hanoi();
+		HANOI hanoi = new HANOI();
 		hanoi.paloA.push(hanoi.pieza3);
 		hanoi.paloA.push(hanoi.pieza2);
 		hanoi.paloA.push(hanoi.pieza1);
