@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class HANG {
     //TODO se elige la palabra aleatoriamente en el constructor y se saca la palabra del array y la metes en una variable propia
-    private String palabra = "perro";
+    private final String palabra = "perro";
     private int numIntentos = 5;
     public void mostrarInfo(){
 

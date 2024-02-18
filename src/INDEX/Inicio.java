@@ -24,7 +24,8 @@ public class Inicio {
             System.out.println("2. TresEnRaya");
             System.out.println("3. Ahorcado");
             System.out.println("4. Hanoi");
-            System.out.println("5. Salir");
+            System.out.println("5. Mastermind");
+            System.out.println("6. Salir");
             System.out.print("Elige: ");
 
             eleccion = in.nextInt();
