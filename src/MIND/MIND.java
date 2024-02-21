@@ -6,16 +6,103 @@ public class MIND {
     public void inicio(Scanner in) {
         int contador = 1;
         MIND game = new MIND();
+        //TODO Hacer CPU
         System.out.println("¡Bienvenido a Mastermind!");
 
         System.out.print("J1 - Introduce tu número: ");
-        int inNumber = in.nextInt();
-        Numero numeroJ1 = new Numero(inNumber);
-
+        String inNumber = in.next();
+        String numeroJ1 = inNumber;
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
         System.out.print("J2 - Introduce tu número: ");
-        inNumber = in.nextInt();
-        Numero numeroJ2 = new Numero(inNumber);
-
+        inNumber = in.next();
+        String numeroJ2 = inNumber;
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
         String numTry;
         boolean isGuessed;
         do {
@@ -26,40 +113,41 @@ public class MIND {
             }
             numTry = in.next();
             isGuessed = game.isGuessed(numTry, numeroJ1, numeroJ2);
-            contador= comprarar(contador, numTry, numeroJ1, numeroJ2);
+            contador = comprarar(contador, numTry, numeroJ1, numeroJ2);
         } while (!isGuessed);
     }
-    public boolean isGuessed(String numTry, Numero numeroJ1, Numero numeroJ2) {
+
+    public boolean isGuessed(String numTry, String numeroJ1, String numeroJ2) {
         boolean isNumGuessed = false;
-        if (Integer.parseInt(numTry) == numeroJ2.getDigitos()) {
+        if (numTry.equals(numeroJ2)) {
             isNumGuessed = true;
             System.out.println("J1 - Ganó");
-        } else if (Integer.parseInt(numTry) == numeroJ1.getDigitos()) {
+        } else if (numTry.equals(numeroJ1)) {
             isNumGuessed = true;
             System.out.println("J2 - Ganó");
         }
         return isNumGuessed;
     }
 
-    public int comprarar(int contador, String numTry, Numero numeroJ1, Numero numeroJ2) {
+    public int comprarar(int contador, String numTry, String numeroJ1, String numeroJ2) {
         int vistos = 0;
         int aciertos = 0;
 
         if (contador % 2 != 0) {
-            for (int i = 0; i < 4; i++) {
-                String aux = "" + numTry.charAt(i);
-                if (String.valueOf(numeroJ2.getDigitos()).indexOf(aux) == numTry.indexOf(aux)) {
+            for (int i = 0; i < numTry.length(); i++) {
+                String[] nums = numTry.split("");
+                if (numeroJ2.indexOf(nums[i]) == numTry.indexOf(nums[i])) {
                     aciertos++;
-                } else if (String.valueOf(numeroJ2.getDigitos()).contains(aux)) {
+                } else if (numeroJ2.contains(nums[i])) {
                     vistos++;
                 }
             }
         } else {
-            for (int i = 0; i < 4; i++) {
-                String aux = "" + numTry.charAt(i);
-                if (String.valueOf(numeroJ1.getDigitos()).indexOf(aux) == numTry.indexOf(aux)) {
+            for (int i = 0; i < numTry.length(); i++) {
+                String[] nums = numTry.split("");
+                if (numeroJ1.indexOf(nums[i]) == numTry.indexOf(nums[i])) {
                     aciertos++;
-                } else if (String.valueOf(numeroJ1.getDigitos()).contains(aux)) {
+                } else if (numeroJ1.contains(nums[i])) {
                     vistos++;
                 }
             }

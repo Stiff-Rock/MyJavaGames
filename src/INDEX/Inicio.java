@@ -22,9 +22,9 @@ public class Inicio {
         do {
             System.out.println("1. PiedraPapelTijera");
             System.out.println("2. TresEnRaya");
-            System.out.println("3. Ahorcado");
-            System.out.println("4. Hanoi");
-            System.out.println("5. Mastermind");
+            System.out.println("3. Hanoi");
+            System.out.println("4. Mastermind");
+            System.out.println("5. Ahorcado");
             System.out.println("6. Salir");
             System.out.print("Elige: ");
 
@@ -38,13 +38,13 @@ public class Inicio {
                     tresEnRaya.inicio(in);
                     break;
                 case 3:
-                    ahoracado.inicio(in);
-                    break;
-                case 4:
                     hanoi.inicio(in);
                     break;
-                case 5:
+                case 4:
                     mastermind.inicio(in);
+                    break;
+                case 5:
+                    ahoracado.inicio(in);
                     break;
                 case 6:
                     System.out.println("¡Gracias por jugar!");
